@@ -8,6 +8,7 @@ import random
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
+screen.title("Turtle Crosser")
 
 player = Player()
 
@@ -29,7 +30,7 @@ while game_is_on:
 
     # detect collision with car
     for car in cars.all_cars:
-        if car.distance(player) < 20:
+        if car.distance(player) < 25:
             game_is_on = False
             scoreboard.game_over()
 
